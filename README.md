@@ -33,3 +33,10 @@ sudo crontab -e
 ```bash
 */60 * * * * /usr/bin/docker exec registry bin/registry garbage-collect /etc/docker/registry/config.yml -m > /home/admin/registry-gc.log
 ```
+## Setting up Certbot
+https://certbot.eff.org/instructions?ws=nginx&os=ubuntufocal
+
+## Setting up Nginx
+https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-20-04
+
+you may need to disable ipv6 until ssl is set.
