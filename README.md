@@ -7,7 +7,7 @@ Note that the htpasswd is managed by the NGINX on the VM. To see its configurati
 Run the registry: 
 
 ```bash
-sudo docker run -d -p 31337:5000 --restart=always --name registry -e REGISTRY_STORAGE_DELETE_ENABLED=true -v /data/registry:/var/lib/registry registry:2
+sudo docker run -d -p 31337:5000 --restart=always --name registry -e REGISTRY_STORAGE_DELETE_ENABLED=true -e REGISTRY_STORAGE_CACHE_BLOBDESCRIPTOR=blah  -v /data/registry:/var/lib/registry registry:2
 ```
 
 ## Cleaning up the registry
